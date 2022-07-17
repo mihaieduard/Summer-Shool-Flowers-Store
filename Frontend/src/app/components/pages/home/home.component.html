@@ -1,0 +1,28 @@
+<ul>
+  <li *ngFor="let flower of flowersArray">
+    <a  routerLink="flower/{{flower.id}}">
+      <img [src]="flower.imageURL" [alt]="flower.name" class="thumbnail"/>
+      <div class="content">
+        <div class="name">
+          {{flower.name}}
+        </div>
+
+	  	<div class="product-item-footer">
+
+		    <div class="delivery-time">
+				  <span>🕒</span>
+				  {{flower.delivery_time}}
+		  	</div>
+
+			  <div class="price">
+			  	<span>
+					  {{flower.price | currency}}
+			  	</span>
+			  </div>
+
+	  	</div>
+     </div>
+
+    </a>
+  </li>
+</ul>

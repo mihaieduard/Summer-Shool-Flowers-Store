@@ -1,0 +1,28 @@
+<div *ngIf="flower" class="container">
+  <img [src]="flower.imageURL" [alt]="flower.name"/>
+
+  <div class="details">
+    <div class="header">
+      <span class="name">
+        {{flower.name}}
+      </span>
+
+    </div>
+
+
+    <div class="delivery-time">
+      <span>
+        Time to deliver about <strong>{{flower.delivery_time}}</strong>
+      </span>
+    </div>
+
+    <div class="price">
+      <span>
+        {{flower.price | currency}}
+      </span>
+    </div>
+
+   <button (click)="addToCart()">Add To Cart</button>
+
+  </div>
+</div>
